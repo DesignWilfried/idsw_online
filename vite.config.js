@@ -10,7 +10,6 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lightningcss'],
   },
-
   build: {
     // Définir la limite à 1000 ko (1 Mo) au lieu de 500 ko par défaut
     chunkSizeWarningLimit: 1000, 
