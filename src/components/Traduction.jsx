@@ -2,7 +2,7 @@
 import {motion,AnimatePresence} from "framer-motion"
 import Button from './Button';
 import styles,{layout} from '../styles'
-import { translator } from '../assets';
+// import { translator } from '../assets';
 import { traduction } from '../constant';
 import { useState } from 'react';
 import {close} from "../assets"
