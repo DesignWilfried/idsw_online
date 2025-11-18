@@ -18,7 +18,7 @@ const App=()=> {
 
   return (
     <div className='bg-primary w-full overflow-hidden'>
-      <div className={`${styles.paddingX} ${styles.flexCenter} fixed opacity-4 left-0 right-0 z-50 shadow-md md:mb-10 navbar`}>
+      <div className={`${styles.paddingX} ${styles.flexCenter} fixed left-0 right-0 z-50 shadow-md md:mb-10`}>
         <div className={`${styles.boxWidth}`}>
           <AnimateOnScroll>
             <Navbar/>

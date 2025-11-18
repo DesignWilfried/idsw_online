@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./index.html", "./src/**/*.{js,jsx}","./src/*.{js,jsx}"],
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}", // C'est la ligne la plus importante
+  ],
   mode: "jit",
   theme: {
     extend: {
@@ -13,15 +16,6 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
-    },
-    keyframes:{
-      fadeX:{
-        "0%":{opacity:"0",transform:"translateY(100px)"},
-        "100%":{opacity:"1",transform:"translateY(0px)"}
-      }
-    },
-    animation:{
-      fadeX:"fadeX 1s ease"
     },
     screens: {
       xs: "480px",
