@@ -12,7 +12,7 @@ export default defineConfig({
   },
   build: {
     // Définir la limite à 1000 ko (1 Mo) au lieu de 500 ko par défaut
-    chunkSizeWarningLimit: 4000, 
+    chunkSizeWarningLimit: 3000, 
   },
   resolve: {
     alias: {
