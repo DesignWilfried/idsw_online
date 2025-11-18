@@ -10,10 +10,10 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lightningcss'],
   },
-  build: {
-    // Définir la limite à 1000 ko (1 Mo) au lieu de 500 ko par défaut
-    chunkSizeWarningLimit: 1000, 
-  },
+  // build: {
+  //   // Définir la limite à 1000 ko (1 Mo) au lieu de 500 ko par défaut
+  //   chunkSizeWarningLimit: 1000, 
+  // },
   resolve: {
     alias: {
       // 🚨 Rediriger les appels à 'lottie-web' vers 'lottie-web-light'
