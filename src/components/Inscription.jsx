@@ -1,8 +1,8 @@
 import {motion,AnimatePresence} from "framer-motion"
 import Button from "./Button";
 import styles, { layout } from "../styles";
-// import Lottie from 'lottie-react'
-import { inscription } from "../assets";
+// // import Lottie from 'lottie-react'
+// import { inscription } from "../assets";
 import { inscriptionCard } from "../constant";
 import React,{ useState } from "react";
 import Tab from "./TabsInscription.jsx";
