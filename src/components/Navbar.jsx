@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {close,idsw_online,menu} from '../assets'
+import {close,menu} from '../assets'
 import { DownOutlined,SettingOutlined } from "@ant-design/icons";
 import { Dropdown,Space } from "antd";
 import { navLinks } from "../constant";

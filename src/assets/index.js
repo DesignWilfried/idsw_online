@@ -1,12 +1,6 @@
-import airbnb from "./airbnb.png";
-import bill from "./bill.png";
-import binance from "./binance.png";
-import card from "./card.png";
-import coinbase from "./coinbase.png";
-import dropbox from "./dropbox.png";
+
 import logo from "./logo.svg";
 import quotes from "./quotes.svg";
-import robot from "./robot.png";
 import send from "./Send.svg";
 import shield from "./Shield.svg";
 import star from "./Star.svg";
@@ -30,8 +24,6 @@ import geotheInstitut from './geothe_institute.png';
 import croixRouge from './croix-rouge_1.png';
 import ecl from './ECL_LOGO.jpg';
 import osd from './logo_osd.png';
-import idsw_online from './idsw_online.jpg';
-import idsw_online_color from './logo_idsw_color.png';
 import fille_apprend from './fille_apprend_alle.jpg';
 import vie_en_allemand from './vie_en_allemangne.png'
 import traduction from "./traduction_doc.jpg";
@@ -51,20 +43,12 @@ export {
   croixRouge,
   ecl,
   osd,
-  idsw_online,
-  idsw_online_color,
   fille_apprend,
   vie_en_allemand,
   traduction,
-  airbnb,
-  bill,
-  binance,
-  card,
-  coinbase,
-  dropbox,
+
   logo,
   quotes,
-  robot,
   send,
   shield,
   star,
