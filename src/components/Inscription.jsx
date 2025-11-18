@@ -1,7 +1,7 @@
 import {motion,AnimatePresence} from "framer-motion"
 import Button from "./Button";
 import styles, { layout } from "../styles";
-import Lottie from 'lottie-react'
+// import Lottie from 'lottie-react'
 import { inscription } from "../assets";
 import { inscriptionCard } from "../constant";
 import React,{ useState } from "react";
@@ -26,7 +26,7 @@ const Inscription=()=>{
         <AnimatePresence key="inscript">
             <motion.section id='Inscription' className={`${layout.sectionReverse} relative`}> 
                 <motion.div  className={`${layout.sectionImgReverse} max-w-[570px]`}>
-                    <Lottie animationData={inscription} loop={true} className="w-full h-[100%] relative" />   
+                    {/* <Lottie animationData={inscription} loop={true} className="w-full h-[100%] relative" />    */}
                 </motion.div>
                 <div className='absolute z-[0] -right-1/3 -top-1/2 w-[500px] h-[500px] rounded-full white__gradient'/>
                 <div className='absolute z-[0] -left-1/3 bottom-0 w-[700px] h-[700px] rounded-full pink__gradient'/>

@@ -1,4 +1,4 @@
-import Lottie from 'lottie-react';
+// import Lottie from 'lottie-react';
 import {motion,AnimatePresence} from "framer-motion"
 import Button from './Button';
 import styles,{layout} from '../styles'
@@ -58,7 +58,11 @@ const Traduction=()=>{
                 </motion.div>
             </div>
             <div className={layout.sectionImg}>
-                <Lottie animationData={translator} loop={true} autoplay={true} className="md:w-[100%] w-[400px] h-[100%]"/>
+                {/* <Lottie 
+                    animationData={translator} 
+                    loop={true} autoplay={true} 
+                    className="md:w-[100%] w-[400px] h-[100%]"
+                    /> */}
             </div>
         </motion.section>
     </AnimatePresence>

@@ -10,6 +10,10 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lightningcss'],
   },
+  build:{
+    sourcemap:false,
+    minify:'esbuild'
+  },
   resolve: {
     alias: {
       // 🚨 Rediriger les appels à 'lottie-web' vers 'lottie-web-light'
