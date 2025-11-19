@@ -34,7 +34,7 @@ const Performance=()=>{
                     </p>
                 </AnimateOnScroll>
                 
-                <Button styl="mt-10" text="Commencer aujourd'hui"/>
+                <Button styl="mt-10" text="WillKommen bei IDSW_online"/>
             </div>
             <div className={`${layout.sectionImg} flex-col`}>
                 {features.map((feature,index)=>(
