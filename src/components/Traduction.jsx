@@ -3,13 +3,14 @@ import {motion,AnimatePresence} from "framer-motion"
 import Button from './Button';
 import styl,{layout} from '../styl'
 import { translator } from '../assets';
+import styles,{layout} from '../styles'
 import { traduction } from '../constant';
 import { useState } from 'react';
 import {close} from "../assets"
 import "../App.css";
 import TranductionTab from './TraductionTabs';
 import AnimateOnScroll from './AnimateOnScroll';
-import { Modal,Space } from "antd";
+import { Modal} from "antd";
 import { createStyles,useTheme } from "antd-style";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 

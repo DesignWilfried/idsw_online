@@ -3,6 +3,7 @@ import Button from "./Button";
 import styl, { layout } from "../styl.js";
 import Lottie from 'lottie-react'
 import { inscription } from "../assets";
+import styles, { layout } from "../styles";
 import { inscriptionCard } from "../constant";
 import React,{ useState } from "react";
 import Tab from "./TabsInscription.jsx";
