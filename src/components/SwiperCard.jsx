@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import styles from "../styles";
+import styl from "../styl";
 import { motion } from "framer-motion";
 import { Button, Modal } from "antd";
 import AnimateOnScroll from "./AnimateOnScroll";
@@ -43,7 +43,7 @@ const SwiperCard=()=>{
             <section className="html z-[0]">
         <div className="body relative">
             <div className="absolute -top-[10%] right-[20%] w-[200px] h-[300%] blue__gradient"/>
-            <h1 className={`${styles.heading2} absolute right-[35%] top-[0] flex justify-center items-center w-full mb-5`}>Nos Services</h1>
+            <h1 className={`${styl.heading2} absolute right-[35%] top-[0] flex justify-center items-center w-full mb-5`}>Nos Services</h1>
              <div className="container">
                 <Swiper
                     effect={'coverflow'}

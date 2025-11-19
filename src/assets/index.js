@@ -29,10 +29,13 @@ import vie_en_allemand from './vie_en_allemangne.png'
 import traduction from "./traduction_doc.jpg";
 
 //animation
-// import inscription from './animation/inscription.json';
-// import translator from './animation/Language Translator.json';
-// import learning from './animation/Online Learning.json'
+import inscription from './animation/inscription.json';
+import translator from './animation/Language Translator.json';
+import learning from './animation/Online Learning.json'
 export {
+inscription,
+translator,
+
   coursADomicile,
   courEnLigne,
   testdaf,

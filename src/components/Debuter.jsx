@@ -1,5 +1,5 @@
 import Button from "./Button";
-import styles from "../styles";
+import styl from "../styl";
 import { notification } from "antd";
 import { SmileOutlined } from "@ant-design/icons";
 import AnimateOnScroll from "./AnimateOnScroll";
@@ -15,17 +15,17 @@ const Debuter=()=>{
         })
     };
     return(
-    <section className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} md:flex-row flex-col  bg-black-gradient rounded-[20px]`}>
+    <section className={`${styl.flexCenter} ${styl.marginY} ${styl.padding} md:flex-row flex-col  bg-black-gradient rounded-[20px]`}>
         {contextHolder}
         <div className="flex-1 flex flex-col ">
             <AnimateOnScroll>
-                <h2 className={styles.heading2}>Aller essayer nos services dés Maintenant</h2>
+                <h2 className={styl.heading2}>Aller essayer nos services dés Maintenant</h2>
             </AnimateOnScroll>
             <AnimateOnScroll>
-                <p className={`${styles.paragraph} max-w-[470px] mt-5`}>Everythings you need to start and grow you German skills anywhere on the planet.</p>
+                <p className={`${styl.paragraph} max-w-[470px] mt-5`}>Everythings you need to start and grow you German skills anywhere on the planet.</p>
             </AnimateOnScroll>
         </div>
-        <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
+        <div className={`${styl.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
             <AnimateOnScroll>
                  <Button handleClick={()=>openNotification()} text="Willkommen bei IDSW"/>
             </AnimateOnScroll>

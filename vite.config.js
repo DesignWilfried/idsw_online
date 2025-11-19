@@ -12,7 +12,19 @@ export default defineConfig({
   },
   build: {
     // Définir la limite à 1000 ko (1 Mo) au lieu de 500 ko par défaut
-    chunkSizeWarningLimit: 1000, 
+    chunkSizeWarningLimit: 3000, 
+    rollupOptions: {
+      onwarn(warning, warn) {
+        // Ignorer spécifiquement les avertissements provenant de node_modules/lottie-web
+        if (warning.code === 'EVAL' && warning.id.includes('lottie-web')) {
+          return; 
+        }
+        if (warning.code === 'EVAL' && warning.id.includes('lottie-web-light')) {
+          return; 
+        }
+        warn(warning); // Laisser passer tous les autres avertissements
+      },
+    },
   },
   resolve: {
     alias: {

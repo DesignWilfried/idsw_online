@@ -18,7 +18,6 @@ const Tabs = ({handleClick}) => {
     niveau:"",
     center:"",
   });
-
   const Valider=async()=>{
     handleClick();
     setCurrent(0);
@@ -71,7 +70,7 @@ const Tabs = ({handleClick}) => {
 
 const steps = [
   {
-    title: <p className={`${current===0?"text-white":"hidden"}`}>Choix du niveau</p>,
+    title: <p className={`${current===0?"text-dimBlue":"hidden"}`}>Choix du niveau</p>,
     content: <div className="flex justify-center m-4">
             <Flex gap="small">
                 <Button onClick={
@@ -108,10 +107,10 @@ const steps = [
         </div>,
   },
   {
-    title: <p className={`${current===1?"text-white":"hidden"}`}>Entrer votre nom</p>,
+    title: <p className={`${current===1?"text-dimBlue":"hidden"}`}>Entrer votre nom</p>,
     content: <Form
     colon
-    name="basic"
+    name="basicIN"
     labelCol={{ span: 8 }}
     wrapperCol={{ span: 12 }}
     style={{ maxWidth: 700,marginTop:20 ,color:token.colorTextLabel}}
@@ -174,7 +173,7 @@ const steps = [
   },
   {
     status: 'process',
-    title: <p className={`${current===2?"text-white":"hidden"}`}>Entrer votre email</p>,
+    title: <p className={`${current===2?"text-dimBlue":"hidden"}`}>Entrer votre email</p>,
     content: <p className="text-white text-[20px] m-[10px]">Willkommen bei IDSW_online {user.nom}</p>
   },
 ];

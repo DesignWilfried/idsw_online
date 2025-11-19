@@ -1,4 +1,4 @@
-const styles = {
+const styl = {
   boxWidth: "xl:max-w-[1280px] w-full",
 
   heading2: "font-poppins font-semibold xs:text-[48px] text-[35px] max-w-[690px]  text-white xs:leading-[76.8px] leading-[66.8px] w-full",
@@ -16,13 +16,13 @@ const styles = {
   marginY: "sm:my-7 my-6",
 };
  export const layout = {
-  section: `flex md:flex-row flex-col ${styles.paddingY}`,
-  sectionReverse: `flex md:flex-row flex-col items-center ${styles.paddingY}`,
+  section: `flex md:flex-row flex-col ${styl.paddingY}`,
+  sectionReverse: `flex md:flex-row flex-col items-center ${styl.paddingY}`,
 
-  sectionImgReverse: `flex-1 flex ${styles.flexCenter} md:mr-10 mr-0 md:mt-0 mt-10 relative`,
-  sectionImg: `flex-1 flex ${styles.flexCenter} md:ml-10 ml-0 md:mt-0 mt-10 relative`,
+  sectionImgReverse: `flex-1 flex ${styl.flexCenter} md:mr-10 mr-0 md:mt-0 mt-10 relative`,
+  sectionImg: `flex-1 flex ${styl.flexCenter} md:ml-10 ml-0 md:mt-0 mt-10 relative`,
 
-  sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
+  sectionInfo: `flex-1 ${styl.flexStart} flex-col`,
 };
 
-export default styles;
+export default styl;

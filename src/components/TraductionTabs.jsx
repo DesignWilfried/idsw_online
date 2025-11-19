@@ -145,10 +145,10 @@ const steps = [
   //   </Form>
   // },
   {
-    title: <p className={`${current===1?"text-white":"hidden"}`}>Entrez vos Informations</p>,
+    title: <p className={`${current===0?"text-dimBlue":"hidden"}`}>Entrez vos Informations</p>,
     content: <Form
     colon
-    name="basic"
+    name="basicf"
     labelCol={{ span: 8 }}
     wrapperCol={{ span: 12 }}
     style={{ maxWidth: 600,marginTop:20 }}
@@ -186,7 +186,7 @@ const steps = [
           <p className="ant-upload-drag-icon">
             <InboxOutlined />
           </p>
-          <p className="text-white">Cliquer ou faire glisser votre document ici</p>
+          <p>Cliquer ou faire glisser votre document ici</p>
           <p className="text-secondary">un document a la fois.</p>
         </Dragger>
       </Form.Item>
@@ -200,7 +200,7 @@ const steps = [
   },
   {
     status: 'process',
-    title: <p className={`${current===2?"text-white":"hidden"}`}>Entrer votre email</p>,
+    title: <p className={`${current===1?"text-dimBlue":"hidden"}`}>Entrer votre email</p>,
     content: <p className="text-white text-[20px] m-[10px]">Vielen Dank fur ihr Vertrauen <strong className="text-secondary">.</strong> </p>
   },
 ];
@@ -229,7 +229,7 @@ const steps = [
        responsive
        current={current}
        direction="horizontal" 
-       className="md:flex hidden text-white"
+       className="md:flex hidden "
 
        items={items} 
        />

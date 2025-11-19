@@ -37,7 +37,7 @@ const items=[
 const Navbar =()=>{
     const [toggle,setToggle]=useState(false)
     return(
-        <nav className="w-full flex py-6 justify-between items-center navbar">
+        <nav className="w-full flex py-3 justify-between items-center navbar">
             <img src={close} alt="idsw" className='w-[30px] h-[32px]'/>
             <ul className="list-none sm:flex  justify-end items-center flex-1 hidden navlong">
                 {navLinks.map((nav,index)=>(

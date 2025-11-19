@@ -6,7 +6,7 @@ import {star,shield,send,
 
 export const navLinks=[
     {
-        id:"Accueil",
+        id:"Header",
         title:"Accueil",
     },
     {

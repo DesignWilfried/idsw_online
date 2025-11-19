@@ -1,17 +1,17 @@
-import styles from "../styles";
+import styl from "../styl";
 import { logo } from "../assets";
 import { footerLinks,socialMedia } from "../constant";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const Footer=()=>(
-    <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
-      <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
+    <section className={`${styl.flexCenter} ${styl.paddingY} flex-col`}>
+      <div className={`${styl.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className="flex-1 flex flex-col justify-start mr-10">
             <AnimateOnScroll>
                 <img src={logo} alt="logo" className="w-[266px] h-[72px] object-contain" />
             </AnimateOnScroll>
                 <AnimateOnScroll>
-                    <p className={`${styles.paragraph} mt-4 max-w-[310px] text-gradient`}>Institut der sicherte Weg</p>
+                    <p className={`${styl.paragraph} mt-4 max-w-[310px] text-gradient`}>Institut der sicherte Weg</p>
                 </AnimateOnScroll>  
         </div>
         <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
