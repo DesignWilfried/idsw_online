@@ -14,6 +14,7 @@ import Footer from './components/Footer.jsx';
 import SwiperCard from './components/SwiperCard.jsx'
 import AnimateOnScroll from './components/AnimateOnScroll.jsx';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import Localisation from './components/localisation.jsx';
 import "./App.css"
 import { Spin } from 'antd';
 import { useEffect, useState } from 'react';
@@ -63,6 +64,7 @@ const App=()=> {
             <SwiperCard/>
             <Performance/>
             <Inscription/>
+            <Localisation/>
             <Traduction/>
             <Personal/>
             <Clients/>

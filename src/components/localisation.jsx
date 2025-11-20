@@ -2,17 +2,17 @@ import {motion,AnimatePresence} from "framer-motion"
 import Button from "./Button";
 import styl, { layout } from "../styl.js";
 import Lottie from 'lottie-react'
-import { inscription } from "../assets";
+import { localisation } from "../assets";
 import { inscriptionCard } from "../constant";
 import React,{ useState } from "react";
 import Tab from "./TabsInscription.jsx";
-import {close} from '../assets'
 import "../App.css"
 import AnimateOnScroll from "./AnimateOnScroll.jsx";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 //modal import
-import { Modal,Space } from "antd";
+import { Modal,Tag } from "antd";
 import { createStyles,useTheme } from "antd-style";
+import { RadarChartOutlined,HomeOutlined } from "@ant-design/icons";
+
 
 
 const useStyle=createStyles(({token})=>({
@@ -35,10 +35,15 @@ const useStyle=createStyles(({token})=>({
 }))
 
 
-const Inscription=()=>{
+const Localisation=()=>{
 //variable modal
 const [isModalOpen, setIsModalOpen] = useState(false);
   const { styles } = useStyle();
+
+  const fullAddress = "VGJ4+JGP Sprachschule Der Sicherste Weg, Av. du 27 Août 1940, Yaoundé, Cameroon";
+
+const mapsUrl = `https://www.google.com/maps/dir//Current+Location/${encodeURIComponent(fullAddress)}`;
+
   const token = useTheme();
   const toggleModal = () => {
     setIsModalOpen(true);
@@ -71,21 +76,13 @@ const [isModalOpen, setIsModalOpen] = useState(false);
     },
   };
   //fin
-   const [inscript,setInscript]=useState(true);
-   const toggle=()=>{
-    setInscript(!inscript);
-    console.log(inscript)
-   }
+  
     return (
         <AnimatePresence key="inscript">
             <motion.section id='Inscription' className={`${layout.sectionReverse} relative`}> 
                 <motion.div  className={`${layout.sectionImgReverse} `}>
-                  {/* <DotLottieReact
-                    src={inscription}
-                    loop
-                    autoplay
-                  /> */}
-                    <Lottie animationData={inscription} loop={true} className="w-full h-[100%] relative" />   
+                
+                    <Lottie animationData={localisation} loop={true} className="w-full h-[100%] relative" />   
                 </motion.div>
                 <div className='absolute z-[0] -right-1/3 -top-1/2 w-[400px] h-[400px] rounded-full white__gradient'/>
                 <div className='absolute z-[0] -left-1/3 bottom-0 w-[400px] h-[400px] rounded-full pink__gradient'/>
@@ -94,23 +91,24 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                         className={`${layout.sectionInfo} ${styl.paddingX} w-full `}>
                              <AnimateOnScroll>
                                 <h2 className={`${styl.heading2}`}>
-                                    {inscriptionCard.title}
+                                    Nos locaux dans la ville de Yaounde
                                 </h2>
                              </AnimateOnScroll>
                             <AnimateOnScroll>
                                 <p className={`${styl.paragraph} max-w-[670px] mt-5`}>
-                                    {inscriptionCard.subtitle}
+                                    Nous sommes un center multifonctionnel gerant dans plusieur domaines avue de facilite
+                                    la procedure de nos apprenants. nous sommes situees a
                                 </p>
                             </AnimateOnScroll>
                             
                             <Button 
                             styles='mt-10 z-[4]' 
-                            text="S'inscrire"
+                            text="Localisation"
                             handleClick={toggleModal}
                             />
                     </div>
                     <Modal
-                    title="INSCRIPTION"
+                    title="LOCALISATION"
                     open={isModalOpen}
                     centered
                     onOk={()=>setIsModalOpen(false)}
@@ -120,11 +118,56 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                     styles={modalStyles}
                     >
                         <div
-                        className="background-container glass-card py-7"
+                        className="background-container glass-card py-7 flex  gap-3"
                         >
-                            <Tab
-                             handleClick={()=>setIsModalOpen(false)} 
-                             style="mt-6 w-full"/>
+                            <div>
+                                <div className="mb-3">
+                                    <Tag
+                                    icon={<RadarChartOutlined/>}
+                                    color="processing"
+                                    >
+                                        <a
+                                            href={mapsUrl}
+                                            
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            IDSW Jouvence
+                                        </a>
+                                    </Tag>
+                                </div>
+                                
+                                 <div className="mb-3">
+                                    <Tag
+                                    icon={<HomeOutlined/>}
+                                    color="processing"
+                                    >
+                                        <a
+                                            href={mapsUrl}
+                                            
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            IDSW Ngoakele
+                                        </a>
+                                    </Tag>
+                                </div>
+                                 <div>
+                                    <Tag
+                                    icon={<RadarChartOutlined/>}
+                                    color="processing"
+                                    >
+                                        <a
+                                            href={mapsUrl}
+                                            
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            IDSW tsinga
+                                        </a>
+                                    </Tag>
+                                </div>
+                            </div>
                         </div>
                     </Modal>
                 
@@ -132,4 +175,4 @@ const [isModalOpen, setIsModalOpen] = useState(false);
         </AnimatePresence>
 )}
 
-export default Inscription;
+export default Localisation;

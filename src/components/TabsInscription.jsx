@@ -23,7 +23,7 @@ const Tabs = ({handleClick}) => {
     setCurrent(0);
     try{
         const response=await axios.post(API_URL,user);
-        if(response){
+        if(response.success){
           message.success("vous etez enregistre");
         } 
     }catch(error){

@@ -31,11 +31,13 @@ import traduction from "./traduction_doc.jpg";
 //animation
 import inscription from './animation/inscription.json';
 import translator from './animation/Language Translator.json';
-import learning from './animation/Online Learning.json'
+import learning from './animation/Online Learning.json';
+import localisation from "./animation/Select Location.json";
 export {
 inscription,
 translator,
-
+learning,
+localisation,
   coursADomicile,
   courEnLigne,
   testdaf,
