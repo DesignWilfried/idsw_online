@@ -14,7 +14,7 @@ import axios from "axios"
 import { progress } from 'framer-motion';
 
 const {Dragger}=Upload;
-const API_URL="http://localhost:5500/api/v1/send-email/";
+const API_URL="https://backend-idsw.onrender.com/api/v1/send-email/";
 
 const TranductionTab=({handleClick,style})=>{
   const { token } = theme.useToken();

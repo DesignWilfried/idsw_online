@@ -3,7 +3,7 @@ import { Button, message, Steps, theme,Form,Flex,Input,Select } from 'antd';
 import { MailOutlined, UserOutlined } from '@ant-design/icons';
 import axios from "axios"
 
-const API_URL="http://localhost:5500/api/v1/etudiants/";
+const API_URL="https://backend-idsw.onrender.com/api/v1/etudiants/";
 
 
 
