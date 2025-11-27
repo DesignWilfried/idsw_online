@@ -79,7 +79,12 @@ export const enseignants=[
           },
           {
             icon:whatsapp,
-            link:"https://wa.me/675951200"
+            link:"https://wa.me/675951200",
+          },
+          {
+            icon:twitter,
+            link:"https://wa.me/681487276"
+
           },
          ]
 
@@ -101,8 +106,10 @@ export const enseignants=[
           },
           {
             icon:whatsapp,
-            link:"https://wa.me/675951200"
-          },
+            link:"https://wa.me/675951200",
+            icon:twitter,
+            link:"https://wa.me/678128522"
+          }
          ]
 
     },
@@ -123,7 +130,12 @@ export const enseignants=[
           },
           {
             icon:whatsapp,
-            link:"https://wa.me/675951200"
+            link:"https://wa.me/675951200",
+          },
+          {
+            icon:twitter,
+            link:"https://wa.me/691221170"
+
           },
         ]
 
