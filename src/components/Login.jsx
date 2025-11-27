@@ -18,8 +18,8 @@ const Login=({isModalOpen,setIsModalOpen})=>{
         email:"",
         password:""
     });
-    const signUpUrl="http://localhost:3001/api/v1/etudiants";
-    const signInUrl="http://localhost:3001/api/v1/etudiants/sign-in";
+    const signUpUrl="https://idsw-online-aj1b.onrender.com/api/v1/etudiants";
+    const signInUrl="https://idsw-online-aj1b.onrender.com/api/v1/etudiants/sign-in";
     const onFinish1=async(values)=>{
         try {
              if(values.password!==values.confirm){
