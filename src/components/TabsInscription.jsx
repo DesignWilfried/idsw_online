@@ -4,7 +4,7 @@ import { MailOutlined, UserOutlined } from '@ant-design/icons';
 import emailjs from '@emailjs/browser';
 import axios from "axios"
 
-const API_URL="http://localhost:3001/api/v1/subscriptions/";
+const API_URL="https://idsw-online-aj1b.onrender.com/api/v1/subscriptions/";
 
 
 
