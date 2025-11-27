@@ -1,33 +1,36 @@
 import React, { useState } from 'react';
 import { Button, message, Steps, theme,Form,Flex,Input,Select } from 'antd';
 import { MailOutlined, UserOutlined } from '@ant-design/icons';
+import emailjs from '@emailjs/browser';
 import axios from "axios"
 
-const API_URL="https://backend-idsw.onrender.com/api/v1/etudiants/";
+const API_URL="http://localhost:3001/api/v1/subscriptions/";
 
 
 
 const Tabs = ({handleClick}) => {
   const { token } = theme.useToken();
   const [current, setCurrent] = useState(0);
-  const [center,setCenter]=useState("");
+  const [centre,setCentre]=useState("");
   const [user,setUser]=useState({
-    name:"",
-    subName:"",
+    nom:"",
+    prenom:"",
     email:"",
-    niveau:"",
-    center:"",
+    centre:"",
+    niveau_id:"",
   });
   const Valider=async()=>{
     handleClick();
     setCurrent(0);
     try{
         const response=await axios.post(API_URL,user);
-        if(response.success){
-          message.success("vous etez enregistre");
-        } 
+       const messageMail = await emailjs.send("service_2boqrzp", "template_8rrtf9r",{name:user.nom,title:"idsw_message",email:user.email}, "LgftcGL1BlVrmrvcv");
+        console.log('Email envoyé:', messageMail.status, messageMail.text);
+        message.success("vous êtes enregistré avec succès");
+        
     }catch(error){
-        message.error("erreur lors de l'envoi de vos donnees")
+        message.error("erreur lors de l'envoi de vos données");
+        console.error("Erreur lors de l'envoi des données:",error);
     }
     
   }
@@ -35,10 +38,10 @@ const Tabs = ({handleClick}) => {
     next()
     setUser({
         ...user,
-        name:values.name,
-        subName:values.subName,
+        nom:values.name,
+        prenom:values.subName,
         email:values.email,
-        center:center
+        centre:centre
     });
     };
     const onFinishFailed = errorInfo => {
@@ -46,11 +49,11 @@ const Tabs = ({handleClick}) => {
     };
     //select value
     const onChange=value=>{
-      setCenter(value)
+      setCentre(value)
       console.log(`selected ${value}`);
     }
     const onSearch=value=>{
-      setCenter(value);
+      setCentre(value);
       console.log('search',value);
     }
     const options=[
@@ -75,33 +78,36 @@ const steps = [
             <Flex gap="small">
                 <Button onClick={
                     (event) =>{ 
-                        const value=event.target.textContent;
-                        setUser({...user,niveau:value});
+                        const value=1;
+                        setUser({...user,niveau_id:value});
                         next()}} 
                     color="default" variant='outlined'>A1</Button>
                 <Button onClick={
                     (event) =>{ 
-                        const value=event.target.textContent;
-                        setUser({...user,niveau:value});
+                        const value=2;
+                        console.log(value);
+                        setUser({...user,niveau_id:value});
                         next()}} color="default" variant='outlined'>A2</Button>
             </Flex>
             <Flex gap="small" className='mr-2 ml-4' >
                 <Button onClick={
                     (event) =>{ 
-                        const value=event.target.textContent;
+                        const value=3;
                         setUser({...user,niveau:value});
                         next()}} color="default" variant='outlined'>B1</Button>
                 <Button onClick={
                     (event) =>{ 
-                        const value=event.target.textContent;
-                        setUser({...user,niveau:value});
+                        const value=4;
+                        console.log(value);
+                        setUser({...user,niveau_id:value});
                         next()}} color="default" variant='outlined'>B2</Button>
             </Flex>
             <Flex gap="small">
                 <Button onClick={
                     (event) =>{ 
-                        const value=event.target.textContent;
-                        setUser({...user,niveau:value});
+                        const value=5;
+                        console.log(value);
+                        setUser({...user,niveau_id:value});
                         next()}} color="default" variant='outlined'>C1</Button>
             </Flex>
         </div>,
@@ -173,7 +179,7 @@ const steps = [
   },
   {
     status: 'process',
-    title: <p className={`${current===2?"text-dimBlue":"hidden"}`}>Entrer votre email</p>,
+    title: <p className={`${current===2?"text-dimBlue":"hidden"}`}>Entrez votre email</p>,
     content: <p className="text-white text-[20px] m-[10px]">Willkommen bei IDSW_online {user.nom}</p>
   },
 ];

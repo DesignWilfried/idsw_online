@@ -42,7 +42,9 @@ const [isModalOpen, setIsModalOpen] = useState(false);
 
   const fullAddress = "VGJ4+JGP Sprachschule Der Sicherste Weg, Av. du 27 Août 1940, Yaoundé, Cameroon";
 
-const mapsUrl = `https://www.google.com/maps/dir//Current+Location/${encodeURIComponent(fullAddress)}`;
+// const mapsUrl = `https://www.google.com/maps/dir//Current+Location/${encodeURIComponent(fullAddress)}`;
+const mapsUrl=`https://www.google.com/maps/dir/?api=1&dir_action=navigate&destination=${encodeURIComponent(fullAddress)}`;
+const mapsUrl1=`https://www.google.com/maps/dir/?api=1&dir_action=navigate&destination=${encodeURIComponent("3.8458009142962286, 11.469318335697539")}`;
 
   const token = useTheme();
   const toggleModal = () => {
@@ -91,13 +93,13 @@ const mapsUrl = `https://www.google.com/maps/dir//Current+Location/${encodeURICo
                         className={`${layout.sectionInfo} ${styl.paddingX} w-full `}>
                              <AnimateOnScroll>
                                 <h2 className={`${styl.heading2}`}>
-                                    Nos locaux dans la ville de Yaounde
+                                    Nos locaux dans la ville de Yaoundé
                                 </h2>
                              </AnimateOnScroll>
                             <AnimateOnScroll>
                                 <p className={`${styl.paragraph} max-w-[670px] mt-5`}>
-                                    Nous sommes un center multifonctionnel gerant dans plusieur domaines avue de facilite
-                                    la procedure de nos apprenants. nous sommes situees a
+                                    Nous sommes un centre multifonctionnel gérant dans plusieurs domaines en vue de faciliter.
+La procédure de nos apprenants. Nous sommes situées. Cliquer sur le bouton pour plus d'information
                                 </p>
                             </AnimateOnScroll>
                             
@@ -143,7 +145,7 @@ const mapsUrl = `https://www.google.com/maps/dir//Current+Location/${encodeURICo
                                     color="processing"
                                     >
                                         <a
-                                            href={mapsUrl}
+                                            href={mapsUrl1}
                                             
                                             target="_blank"
                                             rel="noopener noreferrer"

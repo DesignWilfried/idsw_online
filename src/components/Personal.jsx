@@ -14,7 +14,9 @@ const Personal=()=>(
            <div className="w-full md:mt-0 mt-6">
             <AnimateOnScroll>
                 <p className={`${styl.paragraph} text-left `}>
-                    Nous mettons a votre disposition les meilleurs apprenants issues des grandes ecoles de langue du pays. En fin de formation les etudiants desireux de prodiger des cours en langue allemande peuvent ainsi se rapprocher de nous.
+                    Nous mettons à votre disposition les meilleurs apprenants issus des grandes écoles de langue du pays.
+                     En fin de formation, les étudiants désireux de prodiguer des cours en langue allemande peuvent ainsi
+                      se rapprocher de nous.
                 </p>
             </AnimateOnScroll>  
            </div>

@@ -13,6 +13,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 //modal import
 import { Modal,Space } from "antd";
 import { createStyles,useTheme } from "antd-style";
+import Login from "./Login.jsx";
 
 
 const useStyle=createStyles(({token})=>({
@@ -39,7 +40,7 @@ const Inscription=()=>{
 //variable modal
 const [isModalOpen, setIsModalOpen] = useState(false);
   const { styles } = useStyle();
-  const token = useTheme();
+  const tokenColor = useTheme();
   const toggleModal = () => {
     setIsModalOpen(true);
   };
@@ -52,7 +53,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
   };
   const modalStyles = {
     header: {
-      borderInlineStart: `5px solid ${token.colorPrimary}`,
+      borderInlineStart: `5px solid ${tokenColor.colorPrimary}`,
       borderRadius: 0,
       paddingInlineStart: 5,
     },
@@ -71,20 +72,17 @@ const [isModalOpen, setIsModalOpen] = useState(false);
     },
   };
   //fin
-   const [inscript,setInscript]=useState(true);
-   const toggle=()=>{
-    setInscript(!inscript);
-    console.log(inscript)
-   }
+//token
+const [token,setToken]=useState(`${localStorage.getItem('userToken')}`);
+const [loginModal,setLoginModal]=useState(false);
+const toggleLoginModal=()=>{
+  setLoginModal(true);
+}
+  
     return (
         <AnimatePresence key="inscript">
             <motion.section id='Inscription' className={`${layout.sectionReverse} relative`}> 
                 <motion.div  className={`${layout.sectionImgReverse} `}>
-                  {/* <DotLottieReact
-                    src={inscription}
-                    loop
-                    autoplay
-                  /> */}
                     <Lottie animationData={inscription} loop={true} className="w-full h-[100%] relative" />   
                 </motion.div>
                 <div className='absolute z-[0] -right-1/3 -top-1/2 w-[400px] h-[400px] rounded-full white__gradient'/>
@@ -106,7 +104,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                             <Button 
                             styles='mt-10 z-[4]' 
                             text="S'inscrire"
-                            handleClick={toggleModal}
+                            handleClick={token ? toggleModal : toggleLoginModal}
                             />
                     </div>
                     <Modal
@@ -127,7 +125,19 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                              style="mt-6 w-full"/>
                         </div>
                     </Modal>
-                
+                {/* connexion verification */}
+                <Modal
+                  title="Connexion"
+                  open={loginModal}
+                  centered
+                  onOk={()=>setLoginModal(false)}
+                  onCancel={()=>setLoginModal(false)}
+                  footer="IDSW"
+                  className={classNames}
+                  styles={modalStyles}
+              >
+                    < Login/>
+              </Modal>
             </motion.section>
         </AnimatePresence>
 )}

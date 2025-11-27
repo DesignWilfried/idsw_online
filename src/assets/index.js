@@ -27,6 +27,8 @@ import osd from './logo_osd.png';
 import fille_apprend from './fille_apprend_alle.jpg';
 import vie_en_allemand from './vie_en_allemangne.png'
 import traduction from "./traduction_doc.jpg";
+import whatsapp from "./whatsapp.svg"
+import gisma_logo from "./gisma_logo.png"
 
 //animation
 import inscription from './animation/inscription.json';
@@ -38,6 +40,7 @@ inscription,
 translator,
 learning,
 localisation,
+gisma_logo,
   coursADomicile,
   courEnLigne,
   testdaf,
@@ -48,7 +51,7 @@ localisation,
   fille_apprend,
   vie_en_allemand,
   traduction,
-
+ whatsapp,
   logo,
   quotes,
   send,

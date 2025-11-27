@@ -29,12 +29,12 @@ const Performance=()=>{
                     </h2>
                 </AnimateOnScroll>
                 <AnimateOnScroll>
-                    <p className={`${styl.paragraph} max-w-[490px] mt-5`}>
+                    <p className={`${styl.paragraph} max-w-[490px] mt-5 mb-3`}>
                         Nous sommes un centre qualifier dans la prodigation des cours,traduction de leur document et leur conseilles dans les etapes a suivant jusqu'a l'obtention de leur visa pour l'allemangne
                     </p>
                 </AnimateOnScroll>
                 
-                <Button styl="mt-10" text="WillKommen bei IDSW_online"/>
+                <Button styl="mt-5" text="WillKommen bei IDSW_online"/>
             </div>
             <div className={`${layout.sectionImg} flex-col`}>
                 {features.map((feature,index)=>(

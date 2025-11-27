@@ -1,8 +1,8 @@
-import { icons } from 'antd/es/image/PreviewGroup';
+
 import {star,shield,send, 
   people01,people02,twitter,linkedin,apple,
-  people03,instagram,facebook, geotheInstitut, 
-  ecl, osd, croixRouge} from '../assets'
+  people03,instagram,facebook, geotheInstitut, whatsapp,
+  ecl, osd, croixRouge,gisma_logo} from '../assets'
 
 export const navLinks=[
     {
@@ -26,47 +26,45 @@ export const navLinks=[
     }
 ];
 
-export const carrouselInfo=[
-    //information du site de Goethe
-];
+
 
 export const features=[
     {
         id:"feature-1",
         icon:star,
         title:"Pronostique",
-        content:"Les meilleurs services dans votre processus d'apprentissage de la langue allemande",
+        content:"Les services optimaux pour faciliter votre apprentissage de la langue allemande.",
     },
     {
         id:"feature-2",
         icon:shield,
         title:"100% Success",
-        content:"Nous affichons un taux de reussite tres eleve aux examens ECL ET GOETHE ",
+        content:"Nous enregistrons un taux de succès particulièrement élevé aux examens ECL et GOETHE.",
     },
     {
         id:"feature-3",
         icon:send,
         title:"Accompagnement",
-        content:"Nous vous accompagnons dans votre proccessus de voyage en Allemangne",
+        content:"Nous vous accompagnons dans votre processus de voyage en Allemagne.",
     }
 ];
 
 export const inscriptionCard={
-    title:"Vous pouvez deja vous inscrire des Maintemant.",
-    subtitle:"Ici vous avez la possibilite de vous inscrire a nos differents programmes de cours de langue allant du A1 jusqu'au C1",
+    title:"Vous pouvez dès à présent vous inscrire.",
+    subtitle:"Ici, vous avez l'opportunité de vous inscrire à nos différents cours de langue, qui couvrent les niveaux de A1 à C1.",
     image:people01,
 }
 
 export const traduction=
 {
     title:"Traduction des Documents",
-    subtitle:"Les differents documents(Acte de Naissance,les diplomes comme le baccalaureat,votre piece d'identite,...etc) sont traduit par notre sev'ice affilier a la traduction de document en langue allemand. Pour en-savoir plus,Cliquez sur le bouton <Contactez-Nous>",
+    subtitle:"Notre service dédié à la traduction de documents en allemand s'occupe de traduire différents types de documents, y compris l'acte de naissance, les diplômes tels que le baccalauréat et votre pièce d'identité. Pour obtenir davantage d'informations, cliquez sur le bouton.",
     image:people01,
 }
 export const enseignants=[
     {
         id:"enseignant-1",
-        content:"IDSW vous garantit une education de qualite, un accompagnement suivi et des conceils avisee dans vous proccessus de voyage",
+        content:"Avec IDSW, bénéficiez d'une formation de haut niveau, d'un accompagnement étroit et de recommandations éclairées pour réussir votre projet de voyage.",
         name:"Frau Monthe Daniel",
         title:"Willkommen",
         image:people01,
@@ -80,7 +78,7 @@ export const enseignants=[
             link:"https://instagram.com"
           },
           {
-            icon:twitter,
+            icon:whatsapp,
             link:"https://wa.me/675951200"
           },
          ]
@@ -88,7 +86,7 @@ export const enseignants=[
     },
      {
         id:"enseignant-2",
-        content:"L'apprentissage de la langue allemande est un parcourt perieux mais pas impossible",
+        content:"L'étude de la langue allemande représente un défi considérable, mais c'est tout à fait faisable.",
         name:"Herr Ledjou",
         title:"Willkommen",
         image:people02,
@@ -102,7 +100,7 @@ export const enseignants=[
             link:"https://instagram.com"
           },
           {
-            icon:twitter,
+            icon:whatsapp,
             link:"https://wa.me/675951200"
           },
          ]
@@ -110,7 +108,7 @@ export const enseignants=[
     },
      {
         id:"enseignant-3",
-        content:"Un suivi constant dans le proccessus d'apprentissage de la langue allemand est l'un des principale pilier des notre Centre",
+        content:"Un accompagnement régulier tout au long du processus d'apprentissage de la langue allemande constitue l'un des principaux fondements de notre Centre.",
         name:"Herr Nzoukeu Paulin ",
         title:"Willkommen",
         image:people03,
@@ -124,7 +122,7 @@ export const enseignants=[
             link:"https://instagram.com"
           },
           {
-            icon:twitter,
+            icon:whatsapp,
             link:"https://wa.me/675951200"
           },
         ]
@@ -155,7 +153,7 @@ export const socialMedia = [
   },
   {
     id: "social-media-5",
-    icon: apple,
+    icon: whatsapp,
     link: "https://www.whatapps.com/",
   },
 ];
@@ -185,6 +183,12 @@ export const clients = [
     name:"osd",
     logo: osd,
     link:"https://www.osd.at/en/"
+  },
+  {
+    id: "client-5",
+    name:"gisma",
+    logo: gisma_logo,
+    link:"https://www.gisma.com/"
   },
 ];
 

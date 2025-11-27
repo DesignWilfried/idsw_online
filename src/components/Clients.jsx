@@ -14,7 +14,7 @@ export const Clients=()=>(
                      <motion.a 
                         whileTap={{scale:1.5}}
                         href={client.link}  className={`flex-1 z-[10] ${styl.flexCenter} z-[3] mb-5 sm:min-w-[192px] min-w-[120px] ${index==clients.length-1?"mr-0":"mr-5"}`}>
-                        <img src={client.logo} alt={client.name} className={`rounded-full ${index>=clients.length-2?"sm:w-[185px] w-[100px]":"sm:w-[292px] w-[150px]"} object-contain`} />
+                        <img src={client.logo} alt={client.name} className={`rounded-full ${index>=clients.length-3?"sm:w-[185px] w-[100px]":"sm:w-[292px] w-[150px]"} object-contain`} />
                     </motion.a>
                 </AnimateOnScroll> 
             ))}
